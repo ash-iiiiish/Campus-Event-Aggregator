@@ -91,7 +91,7 @@ Below are some example placeholders for adding screenshots and previews of your 
 
 | Home Page | Events Page |
 |------------|-------------|
-| ![Home Page](images/Screenshot_1.png) | ![Events Page](images/Screenshot_2.png) |
+| ![Home Page](images/image.png) | ![Events Page](images/Screenshot_2.png) |
 
 > 💡 *Replace the image paths above with actual screenshots or add a link to your hosted demo.*
 
@@ -105,17 +105,13 @@ If something doesn’t display correctly:
 
 ---
 
-## 👨‍💻 Contributors
+## 👨‍💻 Contributors:
+Akshayverma001
+129Ashish
+
 - **Team Campus Connect**  
   *Developed as part of Hackathon 2K25 project.*
 
-If you'd like to contribute, feel free to fork the repo and submit a pull request!
 
----
-
-## 📄 License
-This project is licensed under the **MIT License** — feel free to use and modify it for your own campus!
-
----
 
 ⭐ **Campus Connect** — Making campus life more connected, one event at a time!
