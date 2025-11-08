@@ -1196,13 +1196,25 @@
         }
 
         // Enroll in event from card
-        function enrollInEventFromCard(eventId) {
-            const event = events.find(e => e.id === eventId);
-            if (!event) return;
+        // Enroll in event from modal
+        function enrollInEvent() {
+            if (!currentEvent) return;
+
+            // If it's the Hackathon event, open the Google Sheets link
+            if (currentEvent.title === "Hackathon 2K25") {
+                window.open("https://docs.google.com/spreadsheets/d/17MkCeV_q9qNymZoNulXdGJdTiJdTu5hUdXClwcUUltc/edit?usp=sharing", "_blank");
+                return;
+            }
             
-            if (event.status === 'upcoming' && !event.enrolled) {
-                event.enrolled = true;
-                event.rsvpCount++;
+            if (currentEvent.status === 'upcoming' && !currentEvent.enrolled) {
+                currentEvent.enrolled = true;
+                currentEvent.rsvpCount++;
+                
+                // Update UI
+                enrollBtn.textContent = 'Already Enrolled';
+                enrollBtn.disabled = true;
+                enrollBtn.classList.add('btn-success');
+                document.getElementById('modalRsvpCount').textContent = `${currentEvent.rsvpCount} people enrolled`;
                 
                 // Re-render events
                 renderEvents(events, eventsGrid);
@@ -1210,7 +1222,7 @@
                 renderDashboardEvents();
                 
                 // Show notification
-                showNotification('Enrollment Confirmed', `You've successfully enrolled in ${event.title}`);
+                showNotification('Enrollment Confirmed', `You've successfully enrolled in ${currentEvent.title}`);
             }
         }
 
