@@ -1195,7 +1195,6 @@
             }
         }
 
-        // Enroll in event from card
         // Enroll in event from modal
         function enrollInEvent() {
             if (!currentEvent) return;
@@ -1225,6 +1224,32 @@
                 showNotification('Enrollment Confirmed', `You've successfully enrolled in ${currentEvent.title}`);
             }
         }
+
+        // Enroll in event from card
+        function enrollInEventFromCard(eventId) {
+            const event = events.find(e => e.id === eventId);
+            if (!event) return;
+            
+            // If it's the Hackathon event, open the Google Sheets link
+            if (event.title === "Hackathon 2K25") {
+                window.open("https://docs.google.com/spreadsheets/d/17MkCeV_q9qNymZoNulXdGJdTiJdTu5hUdXClwcUUltc/edit?usp=sharing", "_blank");
+                return;
+            }
+            
+            if (event.status === 'upcoming' && !event.enrolled) {
+                event.enrolled = true;
+                event.rsvpCount++;
+                
+                // Re-render events
+                renderEvents(events, eventsGrid);
+                renderEvents(events, eventsGridEvents);
+                renderDashboardEvents();
+                
+                // Show notification
+                showNotification('Enrollment Confirmed', `You've successfully enrolled in ${event.title}`);
+            }
+        }
+        
 
         // Set rating stars
         function setRating(rating) {
