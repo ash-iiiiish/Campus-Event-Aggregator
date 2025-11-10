@@ -108,7 +108,7 @@ If something doesn’t display correctly:
 | akshayverma001 | | 129Ashish | | Vanshikarajan | 
 
 - **Team -X **  
-  *Developed as part of Hackathon 2K25 project.*
+  *Developed as part of Hackathon 2K25 project at Genesis Fest.*
 
 
 ⭐ **Campus Connect** — Making campus life more connected, one event at a time!
