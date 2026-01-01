@@ -105,7 +105,7 @@ If something doesn’t display correctly:
 ---
 
 ## 👨‍💻 Contributors:
-| akshayverma001 | | 129Ashish | | Vanshikarajan | 
+| akshayverma001 | | ash-iiiiish | | Vanshikarajan | 
 
 - **Team -X **  
   *Developed as part of Hackathon 2K25 project at Genesis Fest.*
